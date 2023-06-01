@@ -82,6 +82,10 @@ class CGR:
         plt.scatter(r[:,0], r[:,1], s = size)
         plt.margins(x=0)
         plt.margins(y=0)
+        plt.xlim(right=max(r[:,0])+0.1)
+        plt.xlim(left=min(r[:,0])-0.1)
+        plt.ylim(top=max(r[:,1])+0.1)
+        plt.ylim(bottom=min(r[:,1])-0.1)
         if not show:
             plt.close(fig)  
         else:
