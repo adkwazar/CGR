@@ -73,8 +73,19 @@ class CGR:
             f.write(str(elem[0])+", "+str(elem[1])+"\n")
         f.close()
         
-    def plot(self):
+    def plot(self, axis = True, save = False, im_name = "CGR", show = True, size = 1):
         r = CGR.representation(self)
+        plt.ioff()
         fig = plt.figure(figsize=(6, 6))
-        plt.scatter(r[:,0], r[:,1])
-        plt.show()    
+        if not axis:
+            plt.axis('off')
+        plt.scatter(r[:,0], r[:,1], s = size)
+        plt.margins(x=0)
+        plt.margins(y=0)
+        if not show:
+            plt.close(fig)  
+        else:
+            plt.show()
+            
+        if save is not False:
+            fig.savefig(im_name, dpi=300, bbox_inches="tight",pad_inches=0)
