@@ -11,4 +11,9 @@ ACDEFGHIKLMNPQRSTVWY
 as a list of lists.
 
 
-Moreover, it is possible to generate the phylogenetic tree according to CGR and Discrete Fourier Transform (DFT). To illustrate how to use these functionalities, there is an Example.ipynb file.
+Moreover, it is possible to generate the phylogenetic tree according to CGR and:
+- Discrete Fourier Transform (DFT),
+- Structural Similarity Index Measure (SSIM),
+- Hurst exponent.
+
+To illustrate how to use these functionalities, there is an Example.ipynb file.
