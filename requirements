@@ -1,5 +1,4 @@
 Libraries for CGR:
-
 math,
 cmath,
 numpy >= 1.22.2,
