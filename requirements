@@ -1,4 +1,4 @@
-Libraries for CGR:
+Main ibraries for CGR:
 math,
 cmath,
 numpy >= 1.22.2,
