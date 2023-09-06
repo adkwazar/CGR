@@ -7,6 +7,7 @@ import cmath
 from scipy.cluster.hierarchy import dendrogram, linkage, to_tree
 from numpy import linalg as LA
 
+
 class htree:
     def __init__(self, seqs, names, seq_type = "DNA", tree_method = "average", outer_representation = False, rna_2structure = False):
         self.seqs = seqs
