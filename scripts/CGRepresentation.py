@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 class CGR:
     def __init__(self, seq, seq_type = "DNA", outer_representation = False, rna_2structure = False):
         self.seq = seq
