@@ -10,7 +10,6 @@ ACDEFGHIKLMNPQRSTVWY
 
 as a list of lists.
 
-
 Moreover, it is possible to generate the phylogenetic tree according to CGR and:
 - Discrete Fourier Transform (DFT),
 - Structural Similarity Index Measure (SSIM),
