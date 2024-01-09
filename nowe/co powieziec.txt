@@ -1,0 +1,38 @@
+Do tej porsy rozwazane przez nas modele neuronowe, w zasadzie złozone bylo z tych samych cegiełek. zy to bylo CNN czy RNN czy nawet Transfoerms to w sroku nie bylo nic wiecej procz mnozenia macierzy ze sobą i funkcji aktywacji - najczęsciej Relu, tanh, sigmoidalna, softmax. Jest tez nieco inne podejscie do budowania sieci, z grubsza wyglada tak samo (co do strutkury) ale inny jest sposob kodowania samej informacji, juz to nie jest sama liczba tylko ciąg wartosci - sygnal, oraz inny jest przeplyw tej ifnromacji. W tradycyjycnych sieciach czas nie odgrywal zasadniczo roli, informacja przechodizla przez kolejne warstwy - synchronicznie i na koncu byl jakis wynik, w SNN jest inaczej
+
+powiedziec ze NN pod względem matematycznym to bardzo proste modele, spokojnie mozna by je na informatyce w LO przedstawic; w porownanii np do takiego ICA czy np topoloigicnej persystencji --> moze o tym cos powiem tez i o reinformcement learning na ostatnie dwa spotkania
+
+powiedziec o połąceeniam rezdualnym i pokazac schemat z ksiazki
+
+prezenracje - kilka celow
+- jeszcze raz spojrzec na pewne metody 
+- szerszy przegląd zastosowan
+- ocena realnosci wykoannaia projektu + ewentualne uwagi
+
+--> ten kurs mial dac ogolne pojecie co do metod analizy danych rzonego typu: zwuykle tableryczne ale tez i obrazy, dzwieki
+Do kazdego typu danuych a jeszcze i okreslonego zagadnienia moznaby ztobic osoby nurs, np analiza obrazów komórkowych... na co nie mamy czasu podczas tego kursu, ale oczywisice
+wy mozecie zrealizowac we wlasnym zakresie w ramach projektu, są pewne dodatkowe metody, zwlaaszcza na etapie rpzygotowania danych
+Ultralyticc czy OpenCV
+
+
+
+--> w klasczynmch algorytmach to kernel pomagal radzic sobie z nieliniowosicą (rozszerzal liniowe metody), w sieciach neuronowych robią to funkcje aktywacji
+
+
+Large Language Models (LLMs) to potężne modele językowe oparte na sztucznej inteligencji, które zostały przeszkolone na ogromnych zbiorach danych tekstowych. Głównym celem tych modeli jest zrozumienie i generowanie ludzkich podobnych tekstów. LLMs są często oparte na architekturze Transformer, która pozwala na skuteczne przetwarzanie i generowanie dużych ilości tekstu.
+
+Przykłady Large Language Models obejmują:
+
+GPT-3 (Generative Pre-trained Transformer 3): Jest to jeden z najnowszych i największych modeli stworzonych przez OpenAI. Zawiera 175 miliardów parametrów, co pozwala mu na generowanie wysoce skomplikowanych i zróżnicowanych tekstów.
+
+GPT-2 (Generative Pre-trained Transformer 2): Jego poprzednik, GPT-2, również stworzony przez OpenAI, zawiera 1,5 miliarda parametrów i był jednym z największych modeli dostępnych w momencie swojego wydania.
+
+BERT (Bidirectional Encoder Representations from Transformers): BERT, stworzony przez Google, jest modelem skoncentrowanym na zrozumieniu kontekstu. Ma 340 milionów parametrów i był ważny dla rozwoju technologii związanej z przetwarzaniem języka naturalnego.
+
+XLNet: To również model oparty na Transformer, który łączy idee zarówno autoregresywnego, jak i autoregresywnego z permutacją, aby poprawić zdolności modelu do rozumienia kontekstu.
+
+T5 (Text-To-Text Transfer Transformer): Model T5, stworzony przez Google, jest oparty na idei traktowania wszystkich problemów NLP jako zadania przekształcenia tekstu na tekst. To podejście pozwala na jednolite traktowanie różnych problemów językowych.
+
+RoBERTa (Robustly optimized BERT approach): RoBERTa jest ulepszoną wersją BERT, zoptymalizowaną dla lepszego wydajnościowego i dokładnościowego przetwarzania.
+
+Te modele są wykorzystywane w różnych dziedzinach, takich jak tłumaczenie maszynowe, generowanie tekstu, analiza sentimentu, pytania i odpowiedzi, oraz wiele innych zastosowań związanych z przetwarzaniem języka naturalnego.
