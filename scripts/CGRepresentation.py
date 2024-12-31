@@ -29,41 +29,46 @@ class CGR:
             if self.seq_type == "DNA":
                 residues = ["A","C","T","G"]
                 start_x, start_y = coordinates.mean(axis = 0) 
-                sequence = np.array([start_x, start_y])
+                sequence = [[start_x, start_y]]
                 for i in range(len(self.seq)):
-                    x = 0.5*(sequence[len(sequence)-1]+coordinates[residues.index(self.seq[i])])
-                    sequence = np.vstack((sequence, x))
+                    x = 0.5*(np.array(sequence[-1])+coordinates[residues.index(self.seq[i])])
+                    sequence.append(list(x))
+                sequence = np.array(sequence)
                 return sequence
             
             elif self.seq_type == "protein":
                 residues = ["A","C","D","E","F","G","H","I","K","L","M","N","P","Q","R","S","T","V","W","Y"]
                 start_x, start_y = coordinates.mean(axis = 0) 
-                sequence = np.array([start_x, start_y])
+                sequence = [[start_x, start_y]]
                 for i in range(len(self.seq)):
-                    x = 0.5*(sequence[len(sequence)-1]+coordinates[residues.index(self.seq[i])])
-                    sequence = np.vstack((sequence, x))
-                return sequence            
+                    x = 0.5*(np.array(sequence[-1])+coordinates[residues.index(self.seq[i])])
+                    sequence.append(list(x))
+                sequence = np.array(sequence)
+                return sequence         
             
             elif self.seq_type == "RNA" and not self.rna_2structure:
                 residues = ["A","C","U","G"]
                 start_x, start_y = coordinates.mean(axis = 0) 
-                sequence = np.array([start_x, start_y])
+                sequence = [[start_x, start_y]]
                 for i in range(len(self.seq)):
-                    x = 0.5*(sequence[len(sequence)-1]+coordinates[residues.index(self.seq[i])])
-                    sequence = np.vstack((sequence, x))
+                    x = 0.5*(np.array(sequence[-1])+coordinates[residues.index(self.seq[i])])
+                    sequence.append(list(x))
+                sequence = np.array(sequence)
                 return sequence
             
             elif self.seq_type == "RNA" and self.rna_2structure:
                 residues= ["A","C","U","G"]     
                 start_x, start_y = 0, 0
-                sequence = np.array([start_x, start_y])
+                sequence = [[start_x, start_y]]
                 for i in range(len(self.seq)):
                     if self.rna_2structure[i] == "(" or self.rna_2structure[i] == ")":
-                        x = 0.5*(sequence[len(sequence)-1]+coordinates[4])
-                    else:   
-                        x = 0.5*(sequence[len(sequence)-1]+coordinates[residues.index(self.seq[i])])
-                    sequence = np.vstack((sequence, x))
+                        x = 0.5*(np.array(sequence[-1])+coordinates[4])
+                    else:
+                        x = 0.5*(np.array(sequence[-1])+coordinates[residues.index(self.seq[i])])
+                    sequence.append(list(x))
+                sequence = np.array(sequence)
                 return sequence
+           
             
     def save_representation(self, name = "seq.txt"):
         r = CGR.representation(self)
@@ -81,10 +86,10 @@ class CGR:
         plt.scatter(r[:,0], r[:,1], s = size)
         plt.margins(x=0)
         plt.margins(y=0)
-        plt.xlim(right=max(r[:,0])+0.1)
-        plt.xlim(left=min(r[:,0])-0.1)
-        plt.ylim(top=max(r[:,1])+0.1)
-        plt.ylim(bottom=min(r[:,1])-0.1)
+        plt.xlim(right=max(r[:,0])+0.1) #can be modified
+        plt.xlim(left=min(r[:,0])-0.1) #can be modified
+        plt.ylim(top=max(r[:,1])+0.1) #can be modified
+        plt.ylim(bottom=min(r[:,1])-0.1) #can be modified
         if not show:
             plt.close(fig)  
         else:
